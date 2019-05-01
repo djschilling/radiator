@@ -5,5 +5,10 @@ script:
   - mix format --check-formatted
   - mix test
 
+before_install:
+  - wget https://dl.min.io/server/minio/release/linux-amd64/minio
+  - chmod +x minio
+  - ./minio server /data
+
 notifications:
   slack: podlove:4oqpvB2KNDYwHCOp0qRJMR7H
