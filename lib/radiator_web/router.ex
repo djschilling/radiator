@@ -49,6 +49,9 @@ defmodule RadiatorWeb.Router do
     get "/signup", LoginController, :signup_form
     post "/signup", LoginController, :signup
 
+    get "/usersettings_form", UserSettingsController, :usersettings_form
+    get "/usersettings", UserSettingsController, :usersettings
+
     get "/logout", LoginController, :logout
   end
 
